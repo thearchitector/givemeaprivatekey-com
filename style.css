@@ -2,6 +2,11 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.container {
+  width: min(90rem, 100%);
+  padding: 0 4rem;
+}
+
 #intro {
   margin-top: 5rem;
 }
