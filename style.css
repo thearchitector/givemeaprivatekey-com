@@ -19,8 +19,7 @@ footer {
 }
 
 .button--clipboard {
-  background-color: #eee;
-  background-image: linear-gradient(#fcfcfc, #eee);
+  background-color: transparent;
   border: 0;
   border-radius: 0;
   fill: #e1e1e1;
@@ -34,6 +33,7 @@ footer {
 .button--clipboard:hover *,
 .button--clipboard:focus * {
   opacity: 0.3;
+  background-color: transparent;
 }
 .button--clipboard.tooltip--clipboard:after {
   background: rgb(30, 116, 13, 0.75);
