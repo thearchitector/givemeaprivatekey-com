@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Give Me a Private Key</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="No icon, no cert, no warning? No problem! Private keys now!"
+    />
+    <meta
+      name="keywords"
+      content="cert, certificate, key, pkey, ssh, secure, easy, private, keys, now"
+    />
+    <meta name="author" content="Elias Gabriel" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="http://givemeaprivatekey.com" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://givemeaprivatekey.com" />
+    <meta property="og:title" content="Give Me a Private Key" />
+    <meta
+      property="og:description"
+      content="No icon, no cert, no warning? No problem! Private keys now!"
+    />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="http://givemeaprivatekey.com" />
+    <meta name="twitter:title" content="Give Me a Private Key" />
+    <meta
+      name="twitter:description"
+      content="No icon, no cert, no warning? No problem! Private keys now!"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <section id="intro" class="container">
+      <h1>Give Me a Private Key</h1>
+      <h4>No icon, no cert, no warning? No problem!</h4>
+      <p>
+        Hassle-free and easy multipurpose key pairs NOW. Use them for TLS certificates,
+        SSH authentication, and more!
+      </p>
+    </section>
+
+    <section id="content" class="container">
+      <hr />
+      <h5><u>Private Key</u></h5>
+      <button
+        class="button--clipboard invisible"
+        data-clipboard-target="#privateKey"
+        title="Copy"
+      >
+        <img src="https://clipboardjs.com/assets/images/clippy.svg" alt="Copy" />
+      </button>
+      <pre><code id="privateKey"><i>generating...</i></code></pre>
+
+      <h5><u>Public Key</u></h5>
+      <button
+        class="button--clipboard invisible"
+        data-clipboard-target="#privateKey"
+        title="Copy"
+      >
+        <img src="https://clipboardjs.com/assets/images/clippy.svg" alt="Copy" />
+      </button>
+      <pre><code id="publicKey"><i>generating...</i></code></pre>
+
+      <div class="centered">
+        <a class="button" onClick="window.location.reload()">Need Another?</a>
+      </div>
+    </section>
+
+    <footer>
+      <section class="container">
+        <p>&copy; 2024 Elias Gabriel. Distributed for free.</p>
+      </section>
+    </footer>
+
+    <script src="https://unpkg.com/clipboard@2/dist/clipboard.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
