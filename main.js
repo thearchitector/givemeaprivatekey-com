@@ -20,7 +20,7 @@
     document.getElementById("privateKey").innerHTML = keypair.private;
     document.getElementById("publicKey").innerHTML = keypair.public;
 
-    for (let button in document.getElementsByClassName("button--clipboard")) {
+    for (let button of document.getElementsByClassName("button--clipboard")) {
       button.classList.remove("invisible");
     }
   };
