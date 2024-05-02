@@ -1,4 +1,4 @@
-importScripts("vendor/keypair.js");
+importScripts("vendor/keypair.min.js");
 
 function fix(str) {
   return str.replace(/\r/g, "") + "\n";
