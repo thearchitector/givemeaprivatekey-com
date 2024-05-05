@@ -12,16 +12,16 @@
     }, 500);
   });
 
-  const cryptoWorker = new Worker("crypto.js");
-  cryptoWorker.onmessage = (e) => {
-    const keypair = e.data;
-    cryptoWorker.terminate();
+  const pki = forge.pki;
+  pki.rsa.generateKeyPair({ bits: 2048, workers: -1 }, function (_, keypair) {
+    const publicPEM = pki.publicKeyToPem(keypair.publicKey);
+    const privatePEM = pki.privateKeyToPem(keypair.privateKey);
 
-    document.getElementById("privateKey").innerHTML = keypair.private;
-    document.getElementById("publicKey").innerHTML = keypair.public;
+    document.getElementById("privateKey").innerHTML = privatePEM;
+    document.getElementById("publicKey").innerHTML = publicPEM;
 
     for (let button of document.getElementsByClassName("button--clipboard")) {
       button.classList.remove("invisible");
     }
-  };
+  });
 })();
